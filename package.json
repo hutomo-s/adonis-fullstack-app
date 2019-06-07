@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node ace test"
+    "test": "node ace test",
+    "serve:dev": "nodemon --watch app --watch start --watch config --watch .env -x node server.js"
   },
   "keywords": [
     "adonisjs",
