@@ -17,6 +17,18 @@ class DebugController {
 
 		response.send(responseVar)
 	}
+
+	welcome ({ request, view, response }) {
+		let html = view.render('welcome')
+
+		// TODO using html-minifier
+		// https://www.npmjs.com/package/html-minifier
+
+		console.log(html)
+		
+		response.send(html)
+	}
+
 }
 
 module.exports = DebugController
