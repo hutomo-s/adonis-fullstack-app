@@ -5,6 +5,7 @@
   "description": "The fullstack application boilerplate for Adonisjs",
   "main": "index.js",
   "scripts": {
+    "build": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
     "start": "node server.js",
     "test": "node ace test",
     "serve:dev": "nodemon --watch app --watch start --watch config --watch .env -x node server.js"
@@ -30,9 +31,21 @@
     "@adonisjs/vow": "^1.0.17",
     "@adonisjs/vow-browser": "^1.0.7",
     "html-minifier": "^4.0.0",
+    "multimatch": "^4.0.0",
     "request": "^2.88.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.3",
+    "cross-env": "^5.2.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "laravel-mix": "^4.0.0",
+    "laravel-mix-imagemin": "^1.0.0",
+    "ncp": "^2.0.0",
+    "precss": "^4.0.0",
+    "sass": "^1.20.3",
+    "vue-template-compiler": "^2.6.10"
+  },
   "autoload": {
     "App": "./app"
   }
