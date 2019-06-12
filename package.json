@@ -29,6 +29,7 @@
     "@adonisjs/shield": "^1.0.8",
     "@adonisjs/vow": "^1.0.17",
     "@adonisjs/vow-browser": "^1.0.7",
+    "html-minifier": "^4.0.0",
     "request": "^2.88.0"
   },
   "devDependencies": {},
