@@ -20,13 +20,13 @@ class DebugController {
 	}
 
 	welcome ({ request, view, response }) {
-		let html = view.render('welcome')
+		const html = view.render('welcome')
 
-		var htmlMin = minify(html, {
+		const htmlMin = minify(html, {
 			collapseWhitespace: true,
 			removeAttributeQuotes: true
 		})
-		console.log(htmlMin)
+		
 		response.send(htmlMin)
 	}
 
