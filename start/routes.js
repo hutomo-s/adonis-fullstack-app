@@ -20,4 +20,4 @@ Route.on('/').render('welcome')
 
 Route.get('debug', 'DebugController.index')
 
-Route.get('welcome', 'DebugController.welcome')
+Route.get('debug/welcome', 'DebugController.welcome')

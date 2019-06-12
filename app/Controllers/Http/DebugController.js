@@ -1,5 +1,6 @@
 'use strict'
 
+const minify = require('html-minifier').minify
 const CalcObj = use('App/Handlers/Calc')
 const Calc = new CalcObj()
 
@@ -21,12 +22,12 @@ class DebugController {
 	welcome ({ request, view, response }) {
 		let html = view.render('welcome')
 
-		// TODO using html-minifier
-		// https://www.npmjs.com/package/html-minifier
-
-		console.log(html)
-		
-		response.send(html)
+		var htmlMin = minify(html, {
+			collapseWhitespace: true,
+			removeAttributeQuotes: true
+		})
+		console.log(htmlMin)
+		response.send(htmlMin)
 	}
 
 }
