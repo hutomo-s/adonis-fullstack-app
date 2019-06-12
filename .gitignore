@@ -15,3 +15,4 @@ database/development.sqlite
 .history
 .idea
 public
+public-build/mix-manifest.json
