@@ -1,7 +1,7 @@
 'use strict'
 
-const CalcClass = use('App/Middleware/Calc')
-const Calc = new CalcClass()
+const CalcObj = use('App/Handlers/Calc')
+const Calc = new CalcObj()
 
 class DebugController {
 
